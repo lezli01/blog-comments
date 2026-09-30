@@ -1,0 +1,56 @@
+/* giscus theme for blog.lezli01.is-a.dev: giscus's gruvbox_dark with the blog's
+   design tokens on top (gruvbox UI colours, #83a598 accent, square corners,
+   Roboto Slab / Roboto Mono). Loaded by the blog through jsDelivr, pinned to a
+   commit, because giscus fetches themes with crossorigin="anonymous" and the
+   blog's static Vercel output cannot send CORS headers. */
+@import url("https://giscus.app/themes/gruvbox_dark.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/roboto-slab@5.2.8/400.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/roboto-slab@5.2.8/700.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/roboto-mono@5.2.9/400.css");
+
+main {
+	--color-fg-default: #fbf1c7;
+	--color-fg-muted: #a89984;
+	--color-fg-subtle: #a89984;
+	--color-canvas-default: #282828;
+	--color-canvas-subtle: #504945;
+	--color-canvas-overlay: #504945;
+	--color-canvas-inset: #23241f;
+	--color-border-default: #83a598;
+	--color-border-muted: rgba(168, 153, 132, 0.196);
+	--color-accent-fg: #83a598;
+	--color-accent-emphasis: #83a598;
+	--color-btn-text: #fbf1c7;
+	--color-btn-bg: #282828;
+	--color-btn-border: #83a598;
+	--color-btn-hover-bg: #504945;
+	--color-btn-primary-text: #282828;
+	--color-btn-primary-bg: #83a598;
+	--color-btn-primary-border: #83a598;
+	--color-btn-primary-hover-bg: #83a598;
+	--color-btn-primary-selected-bg: #83a598;
+	--color-btn-primary-disabled-text: rgba(40, 40, 40, 0.6);
+	--color-btn-primary-disabled-bg: rgba(131, 165, 152, 0.6);
+
+	font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+	letter-spacing: 0.25px;
+}
+
+main code,
+main pre,
+main kbd {
+	font-family: "Roboto Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Square corners everywhere, like the blog. */
+main *,
+main *::before,
+main *::after {
+	border-radius: 0 !important;
+}
+
+/* Comment boxes get the blog's flat 5px sticker shadow. */
+main .gsc-comment-box,
+main .gsc-comment > div:first-child {
+	box-shadow: 5px 5px 0 0 #83a598;
+}

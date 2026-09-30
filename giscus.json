@@ -1,0 +1,5 @@
+{
+	"origins": ["https://blog.lezli01.is-a.dev"],
+	"originsRegex": ["^https://blog-[a-z0-9-]+-lacis-projects\\.vercel\\.app$", "^http://localhost:[0-9]+$"],
+	"defaultCommentOrder": "oldest"
+}
